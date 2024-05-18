@@ -1,0 +1,13 @@
+mat-accordion {
+    display: flex;
+    justify-content: center;
+    margin-top: 15%;
+
+    mat-expansion-panel {
+        width: 50%;
+
+        &:last-of-type {
+            border-radius: 16px;
+        }
+    }
+}
