@@ -1,5 +1,5 @@
 <mat-accordion>
-    <mat-expansion-panel hideToggle>
+    <mat-expansion-panel>
       <mat-expansion-panel-header>
         <mat-panel-title>
           Location Details
@@ -8,20 +8,25 @@
           Enter the Details of your Location
         </mat-panel-description>
       </mat-expansion-panel-header>
+
         <mat-form-field appearance="outline">
           <mat-label>Street Address</mat-label>
           <input matInput placeholder="Ex: 1018 Highland Colony Pkwy">
         </mat-form-field>
+
         <mat-form-field appearance="outline">
           <mat-label>City</mat-label>
           <input matInput placeholder="Ex: Ridgeland">
         </mat-form-field>
+
       <mat-form-field appearance="outline">
         <mat-label>State</mat-label>
         <mat-select>
-          <mat-option value="one">First option</mat-option>
-          <mat-option value="two">Second option</mat-option>
+            <mat-option *ngFor="let state of states" [value]="state.abbreviation">
+                {{ state.name }}
+              </mat-option>      
         </mat-select>
       </mat-form-field>
+
     </mat-expansion-panel>
 </mat-accordion>
